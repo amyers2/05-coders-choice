@@ -1,20 +1,23 @@
-Name: ____________           ID:   ____________
+Name: Anthony Myers           ID: 46989531
 
 ## Proposed Project
 
-> Replace this paragraph with the description of what your project
-> will do. Tell me what kind of interface it will have, and roughly
-> how it will work. I don't need more than three or four sentences,
-> unless you feel compelled to write more.
+I plan to create a simple blackjack game that has the capability of 
+simulating 1M or so parallel hands of blackjack to determine the best
+strategy in terms of when to "hit" and when to "stand", based on the
+fact that the dealer must "hit" until they reach at least 17. I would
+like to see the odds of winning between a player stopping at 17, 18, 
+19, and 20 point values. I also would like a second mode where a human
+player can play against a computer "dealer". No betting involved, just
+a win/lose count.
 
 ## Outline Structure
 
-> Describe how you'll organize your code. What is the process and
-> supervision structure? If it uses a framework, how does it fit in. I
-> just need to understand the direction you plan to take. Again, three
-> or four sentences are probably enough.
+**#1:** A deck module that handles the obtaining of a new deck, shuffling, etc.
+**#2**: A supervised OTP game server for carrying out the actions of the game.
+**#3**: A module for simulating and spawning the various concurrent blackjack 
+hands for statistical calculations.
+**#4**: A human player interface for playing against the computer "dealer".
 
-
-
-> replace all the ">" lines with your content, then push this to
-> github and issue a merge request.
+Once I get into it, I may change around the structure a bit, but this is
+my initial idea.
