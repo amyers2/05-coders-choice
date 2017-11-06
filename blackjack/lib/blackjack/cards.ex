@@ -1,4 +1,4 @@
-defmodule Blackjack.CardValues do
+defmodule Blackjack.Cards do
   
   # ~~~ card value functions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   

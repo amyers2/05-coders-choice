@@ -18,7 +18,7 @@ defmodule Deck.Impl do
   end
   
   def draw(deck, num_cards) do
-    {cards, remaining_deck} = Enum.split(deck, num_cards)
+    Enum.split(deck, num_cards)
   end
   
   def burn_card(deck) do

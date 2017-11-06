@@ -1,14 +1,13 @@
 defmodule Blackjack.Application do
   use Application
+  
+  alias Blackjack.DealerSup
+  
 
+  # === Supervisor Init ====================================================== #
+  
   def start(_type, _args) do
-    children = [
-      # Starts a worker by calling: Blackjack.Worker.start_link(arg)
-      {Blackjack.GameServer, []},
-    ]
-    opts = [strategy: :one_for_one, name: Blackjack.Supervisor]
-    
-    Supervisor.start_link(children, opts)
+    DealerSup.start_link()
   end
   
 end
