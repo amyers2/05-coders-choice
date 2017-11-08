@@ -13,7 +13,7 @@ I must be able to run it on my machine without onerous setup. I understand that 
 ## The Process
 
 
-#### Inception
+### Inception
 
 First dream up something that meets the criteria and that sounds like it might be fun. Maybe you put a web interface on the hangman game, or write a server that solves some problem in parallel. Perhaps yoo want to run a simulation verifying the winning strategy in the Monty Hall Paradox (Links to an external site.)Links to an external site. a million times. Or look for phrases from Shakespeare in song lyrics. Or…
 
@@ -27,7 +27,7 @@ what your code will do
 how you'll structure it in terms of servers and supervisors, and your initial thoughts on the modules you'll write
 Sent this to me as a PR (remember to add your name and ID to the request)
 
-#### Feedback
+### Feedback
 
 I'll do my best to get back to you quickly. I'll do this by annotating your proposal. I'll tell you it
 
@@ -38,7 +38,7 @@ In the first two cases, you're free to start coding. (In the second, you can sta
 
 In the third case, we can discuss the changes if you want. You'll need to resubmit to get approval.
 
-#### Implementation
+### Implementation
 
 As you are coding, I encourage you to push changes to your github account frequently. (By this, I mean do regular add/commit/pushes. Don't send me merge requests for every push you do).
 
@@ -76,7 +76,7 @@ All code submitted for grading must be 100% your own. You're free to use librari
 
 ## The Timeline
 
-**Now**	start working on your proposal. Once you have something, send it to me via PR. The sooner I get it and approve it, the sooner you can start work.
-**Nov 5**	All proposals must be in by midnight.
-**Nov 15** & 22	sanity check-ins. These are not optional, and 4 points will be deducted for any missing one
-**Nov 26**	All projects will be submitted by midnight. Absolutely no exceptions
+* **Now** start working on your proposal. Once you have something, send it to me via PR. The sooner I get it and approve it, the sooner you can start work.
+* **Nov 5** all proposals must be in by midnight.
+* **Nov 15 & 22**	sanity check-ins. These are not optional, and 4 points will be deducted for any missing one
+* **Nov 26** all projects will be submitted by midnight. Absolutely no exceptions

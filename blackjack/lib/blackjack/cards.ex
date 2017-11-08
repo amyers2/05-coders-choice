@@ -19,19 +19,6 @@ defmodule Blackjack.Cards do
     count  # done counting
   end
   
-  # combination of multiple aces to give perfect 21
-  defp count_hand([], count, ace_cards) 
-       when (count + (ace_cards - 1) + 11) == 21 do
-    count_hand([], 21, 0)
-  end
-  
-  # good chance for next card to give 21
-  defp count_hand([], count, ace_cards)
-       when (count < 10) and (count + ace_cards) == 11 do
-    count_hand([], count + ace_cards, 0)
-  end
-  
-  # use ace as 11 to get closer to 21
   defp count_hand([], count, ace_cards) 
        when (count + (ace_cards - 1) + 11) <= 21 do
     count_hand([], count + 11, ace_cards - 1)
@@ -41,7 +28,7 @@ defmodule Blackjack.Cards do
     count_hand([], count + 1, ace_cards - 1)
   end
   
-  defp count_hand([{"A", _} | t], count, ace_cards) do
+  defp count_hand([{"A", _suit} | t], count, ace_cards) do
     count_hand(t, count, ace_cards + 1)
   end
   
