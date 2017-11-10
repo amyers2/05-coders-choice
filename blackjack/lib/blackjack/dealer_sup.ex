@@ -3,25 +3,27 @@ defmodule Blackjack.DealerSup do
   
   alias Blackjack.DealerServer
   @name :game_sup
+  @strategy :simple_one_for_one
   
   
   # === Supervisor Init ====================================================== #
   
   def start_link() do
     child_spec = 
-     Supervisor.child_spec(
-       DealerServer, 
-       start: {DealerServer, :start_link, []})
+      Supervisor.child_spec(
+        DealerServer, 
+        start: {DealerServer, :start_link, []},
+        restart: :permanent)
      
     {:ok, _pid} = 
       Supervisor.start_link(
         [child_spec], 
-        strategy: :simple_one_for_one, 
+        strategy: @strategy, 
         name: @name)
   end
   
   def init(_) do
-    supervise([], strategy: :simple_one_for_one)
+    supervise([], strategy: @strategy)
   end
   
   
