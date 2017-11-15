@@ -36,6 +36,23 @@ defmodule Blackjack.Cards do
     count_hand(t, count + card_value(card), ace_cards)
   end
   
+  @doc """
+  Count the total card values of a given hand.
+  
+  ## Examples
+  
+      iex> Blackjack.Cards.count_hand [{"K", :spaces}, {"A", :clubs}]
+      21
+      iex> Blackjack.Cards.count_hand [{"K", :spaces}, {"A", :clubs}, {"2", :diamonds}]
+      13
+      iex> Blackjack.Cards.count_hand [{"7", :hearts}, {"A", :clubs}, {"A", :hearts}, {"A", :diamonds}]
+      20
+      iex> Blackjack.Cards.count_hand [{"A", :clubs}, {"A", :hearts}, {"A", :diamonds}]
+      13
+      iex> Blackjack.Cards.count_hand [{"2", :diamonds}, {"3", :spades}]
+      5
+      
+  """
   def count_hand(hand) do
     count_hand(hand, 0, 0)
   end
