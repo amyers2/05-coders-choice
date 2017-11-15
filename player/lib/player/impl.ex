@@ -26,11 +26,11 @@ defmodule Player.Impl do
   # the cond used here looks cleaner to me than pattern matching
   # in four separate function heads
   defp get_next_action({game, table = %{game_state: state}}) do
-    str = cond do
-      (state == :lost) -> "Sorry, you LOST."
-      (state == :bust) -> "Oops, you BUSTED."
-      (state == :tie ) -> "The hand was a TIE."
-      (state == :won ) -> "Congrats, you WON!"
+    str = case state do
+      :lost -> "Sorry, you LOST."
+      :bust -> "Oops, you BUSTED."
+      :tie  -> "The hand was a TIE."
+      :won  -> "Congrats, you WON!"
     end
     print_hand_result(game, table, "\n" <> str)
   end
