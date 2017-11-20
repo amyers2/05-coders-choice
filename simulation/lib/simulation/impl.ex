@@ -4,7 +4,7 @@ defmodule Simulation.Impl do
   alias Simulation.Stats
   
   @targets 10..21
-  @games 10000
+  @games 10_000
   @hands 100
   
   
@@ -49,11 +49,11 @@ defmodule Simulation.Impl do
   defp table_line(), do: "--------------- "
   
   
-  defp get_min_losses({x1, y1}, {_x2, y2}) when (y1 < y2) do
+  def get_min_losses({x1, y1}, {_x2, y2}) when (y1 < y2) do
     {x1, y1}
   end
   
-  defp get_min_losses(_result_1, result_2) do
+  def get_min_losses(_result_1, result_2) do
     result_2
   end
   
@@ -89,22 +89,22 @@ defmodule Simulation.Impl do
     |> calc_net_losses()
   end
   
-  defp get_count(results, state) do
+  def get_count(results, state) do
     Enum.count(results, &(&1 == state))
   end
   
-  defp calc_net_losses(stats) do
+  def calc_net_losses(stats) do
     Map.put(stats, :net_losses, stats.busts + stats.losses - stats.wins)
   end
   
   defp display_results(stats, target) do
     IO.puts \
-      "  #{target}" <>
-      "\t\t#{stats.wins}" <>
-      "\t\t#{stats.ties}" <>
-      "\t\t#{stats.busts}" <>
-      "\t\t#{stats.losses}" <>
-      "\t\t#{stats.net_losses}"
+      "  #{target}"
+      <> "\t\t#{stats.wins}"
+      <> "\t\t#{stats.ties}"
+      <> "\t\t#{stats.busts}"
+      <> "\t\t#{stats.losses}"
+      <> "\t\t#{stats.net_losses}"
     stats
   end
   
