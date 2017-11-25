@@ -98,13 +98,7 @@ defmodule Simulation.Impl do
   end
   
   defp display_results(stats, target) do
-    IO.puts \
-      "  #{target}"
-      <> "\t\t#{stats.wins}"
-      <> "\t\t#{stats.ties}"
-      <> "\t\t#{stats.busts}"
-      <> "\t\t#{stats.losses}"
-      <> "\t\t#{stats.net_losses}"
+    IO.puts "  #{target}\t\t#{stats}"
     stats
   end
   

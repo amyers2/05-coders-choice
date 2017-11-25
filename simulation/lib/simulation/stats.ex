@@ -8,4 +8,14 @@ defmodule Simulation.Stats do
     net_losses: 0,
   )
   
+  defimpl String.Chars, for: Simulation.Stats do
+    def to_string(stats) do
+      "#{stats.wins}"
+      <> "\t\t#{stats.ties}"
+      <> "\t\t#{stats.busts}"
+      <> "\t\t#{stats.losses}"
+      <> "\t\t#{stats.net_losses}"
+    end
+  end
+  
 end
